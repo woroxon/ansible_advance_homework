@@ -1,0 +1,9 @@
+GUID=`hostname | awk -F. '{print $2}'`
+TOWER_GUID="959b"
+OSP_GUID="00ac"
+OPENTLC_LOGIN="werner.oroxon-atos.net"
+OPENTLC_PASSWORD="wo#Red1002"
+GITHUB_REPO="https://github.com/woroxon/ansible_advance_homework"
+JQ_REPO_BASE="http://www.opentlc.com/download/ansible_bootcamp"
+REGION="us-east-1"
+RH_MAIL_ID="werner.oroxon@atos.net"
