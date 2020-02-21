@@ -41,7 +41,7 @@
       tower_verify_ssl: no
       state: present
       job_type: run
-      playbook: site-3tier-app.yml
+      playbook: aws-site-3tier-app.yml
       project: "Homework Assignment"
   - name: Update Prod Smoke Job template
     tower_job_template:
