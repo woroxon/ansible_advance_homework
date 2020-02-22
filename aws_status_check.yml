@@ -1,5 +1,6 @@
 - hosts: tag_instance_filter_three_tier_app_werner* 
   gather_facts: false
+  become: true
   tasks:
   - name: Check the instances status
     wait_for:
