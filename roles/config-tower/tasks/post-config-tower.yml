@@ -1,5 +1,5 @@
 ---
-- name: Create Homework Assignment project Daniel Zecena
+- name: Create Homework Assignment project Werner Oroxon 
   # Student Werner Oroxon
 
   tower_project:
@@ -8,7 +8,7 @@
     organization: "{{org_name}}"
     state: present
     scm_type: git
-    scm_url: https://github.com/dzecena79/ansible_advance_homework
+    scm_url: https://github.com/woroxon/ansible_advance_homework
     scm_update_on_launch: yes
     scm_branch: master
     #scm_credential: "/root/ansible_advance_homework/gitpass.yml"
