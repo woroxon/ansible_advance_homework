@@ -18,6 +18,10 @@
   - name: List key files
     shell: (cd /root/.ssh; find . -maxdepth 1 -type f -iname '*key.pem')| cut -d'/' -f2
     register: file_to_copy
+  -name: get Key
+     src: /root/.ssh/"{{ file_to_copy.stdout }}"
+     register keyfile
+
   - name: Tower Creds key file
     tower_credential:
       name: Creds for AWS instances
@@ -27,7 +31,8 @@
       tower_host: tower1.{{tower_guid}}.example.opentlc.com
       tower_username: admin
       tower_password: r3dh4t1!
-      ssh_key_data: "/root/.ssh/{{ file_to_copy.stdout }}" 
+      ssh_key_data: "{{ keyfile.content |b64decode }}" 
+      tower_verify_ssl: no
       username: ec2-user
   - name: Update Prod Job template
     tower_job_template:
