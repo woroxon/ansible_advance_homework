@@ -72,3 +72,4 @@
       job_type: run
       playbook: aws_status_check.yml
       project: "Homework Assignment"
+
