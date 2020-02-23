@@ -1,6 +1,6 @@
 GUID=`hostname | awk -F. '{print $2}'`
-TOWER_GUID="959b"
-OSP_GUID="00ac"
+TOWER_GUID="753b"
+OSP_GUID="9bb4"
 OPENTLC_LOGIN="werner.oroxon-atos.net"
 OPENTLC_PASSWORD="wo#Red1002"
 GITHUB_REPO="https://github.com/woroxon/ansible_advance_homework"
