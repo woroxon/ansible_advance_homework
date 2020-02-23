@@ -42,6 +42,7 @@
       tower_username: admin
       tower_password: r3dh4t1!
       state: present
+      tower_verify_ssl: no
       job_type: run
       playbook: site-3tier-app.yml
       project: "Homework Assignment"
@@ -52,6 +53,7 @@
       tower_host: tower1.{{tower_guid}}.example.opentlc.com
       tower_username: admin
       tower_password: r3dh4t1!
+      tower_verify_ssl: no
       state: present
       job_type: run
       playbook: site-smoketest-aws.yml
