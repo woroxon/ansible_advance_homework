@@ -1,4 +1,5 @@
-- hosts: tag_instance_filter_three_tier_app_werner* 
+#- hosts: tag_instance_filter_three_tier_app_werner* 
+- hosts all
   gather_facts: false
   tasks:
   - name: Check the instances status
