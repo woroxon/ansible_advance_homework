@@ -19,6 +19,7 @@
     shell: (cd /root/.ssh; find . -maxdepth 1 -type f -iname '*key.pem')| cut -d'/' -f2
     register: file_to_copy
   -name: get Key
+   slurp:
      src: /root/.ssh/"{{ file_to_copy.stdout }}"
      register keyfile
 
@@ -31,7 +32,7 @@
       tower_host: tower1.{{tower_guid}}.example.opentlc.com
       tower_username: admin
       tower_password: r3dh4t1!
-      ssh_key_data: "{{ keyfile.content |b64decode }}" 
+      ssh_key_data: "{{ keyfile['content'] |b64decode }}" 
       tower_verify_ssl: no
       username: ec2-user
   - name: Update Prod Job template
