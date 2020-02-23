@@ -21,7 +21,7 @@
   
   - name: get Key
     slurp:
-     src: "/root/.ssh/{{ file_to_copy.stdout }}"
+     src: /root/_ssh/"{{ file_to_copy.stdout }}"
      register: keyfile
 
   - name: Tower Creds key file
